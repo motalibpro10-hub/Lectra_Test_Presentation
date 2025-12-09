@@ -11,7 +11,7 @@ LectraCareerOpti
     [Documentation]    Lectra Career Website Job Search Flow
     Log To Console    --- Navigating to Lectra Career website Section ---\n
 
-    # Ouvrir dans un nouvel onglet
+    # Open in a new tab
     Execute JavaScript    window.open('${URL_Lectra_Career}', '_blank')
     Switch Window    NEW
 
@@ -29,25 +29,25 @@ LectraCareerOpti
     Click Element    ${FirstElemntTableOfSearchJob}
 
     # ----------------------------
-    #  Assertion : onglet fermé
+    # Assertion: tab is closed
     # ----------------------------
 
-    # Récupérer le handle de l'onglet actuel avant fermeture
+    # Get the handle of the current tab before closing it
     ${window_to_close}=    Get Window Handles
 
-    # Récupérer la liste des onglets AVANT fermeture
+    # Retrieve the list of tabs BEFORE closing
     ${before}=    Get Window Handles
     ${count_before}=    Get Length    ${before}
 
-    # Fermer la fenêtre
+    # Close the window
     Close Window
 
-    # Récupérer la liste des onglets APRÈS fermeture
+   # Retrieve the list of tabs AFTER closing
     ${after}=    Get Window Handles
     ${count_after}=    Get Length    ${after}
 
-    # Vérifier que le nombre d’onglets a diminué de 1
+    # Verify that the number of tabs has decreased by 1
     Should Be True    ${count_after} == ${count_before - 1}    
 
-    # Vérifier que le handle fermé n'existe plus
+    # Verify that the closed handle no longer exists
     List Should Not Contain Value   ${after}    ${window_to_close}

@@ -5,6 +5,7 @@ Languages="//div[@id='block-lectra-b5-languageswitcherinterfacetext-2']//button[
 English= "//ul[@data-block='header']/li[@hreflang='en']/a"
 Fashion ="//button[normalize-space()='Fashion']"
 LectraFashion= "//a[normalize-space()='Lectra & Fashion']"
+FashionTitle = "//div[@class='field field--name-title field--type-string field--label-hidden field__item']//h1[text()='Fashion']"
 Automotive ="//button[normalize-space()='Automotive']"
 DiscoverAutomotiveJourneyButton ="//div[@class='paragraph paragraph--type--menu-mea-industrie paragraph--view-mode--menu']//a[normalize-space()='Discover the Automotive journey']"
 Furniture ="//button[normalize-space()='Furniture']"

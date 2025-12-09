@@ -42,6 +42,7 @@ Navigate Fashion Section
     Click Element    ${Fashion}
     Wait Until Element Is Visible    ${LectraFashion}    ${WaitSeconds}
     Click Element    ${LectraFashion}
+    Wait Until Element Is Visible    ${FashionTitle}
 
 Navigate Automotive Section
     Log To Console    --- Navigating Automotive Section ---\n
